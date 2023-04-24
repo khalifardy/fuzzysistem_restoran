@@ -45,6 +45,8 @@ Linguistik pelayanan:
 20 end
 trapesium
 
+
+
 2. kurang memuaskan(10-60)
 10 start
 11-20 diantara
@@ -71,6 +73,29 @@ start 80
 90-100 pasti
 trapesium
  
+
+
+
+output rating (1-10)
+
+low, medium, high
+
+low
+pasti (1-3)
+end(5)
+
+medium
+start(3)
+pasti(5-6)
+end(9)
+
+high
+start(6)
+pasti(9-10)
+
+
+
 """
+
 
 # %%
