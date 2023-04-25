@@ -1,5 +1,5 @@
 ---
 deployment:
 tasks:
-- export DEPLOYPATH=/home/ephemera/fuzzysistem_restoran
-- /bin/cp -r * $DEPLOYPATH
+  - export DEPLOYPATH=/home/ephemera/fuzzysistem_restoran
+  - /bin/cp -r * $DEPLOYPATH
