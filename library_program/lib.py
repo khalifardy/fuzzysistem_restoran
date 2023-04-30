@@ -170,20 +170,17 @@ class Defuzifikasi:
         data_ = data.loc[posisi]
 
         if type(data_['fuzzy_value_high']) != type(""):
-            penyebut += self.total_penyebut(data_['fuzzy_value_high'], 8, 10)
-            pembilang += self.total_pembilang(data_['fuzzy_value_high'], 8, 10)
+            penyebut += self.total_penyebut(data_['fuzzy_value_high'], 9, 11)
+            pembilang += self.total_pembilang(data_['fuzzy_value_high'], 9, 11)
 
         if type(data_['fuzzy_value_medium']) != type(""):
-            penyebut += self.total_penyebut(data_['fuzzy_value_medium'], 4, 7)
+            penyebut += self.total_penyebut(data_['fuzzy_value_medium'], 5, 7)
             pembilang += self.total_pembilang(
-                data_['fuzzy_value_medium'], 4, 7)
+                data_['fuzzy_value_medium'], 5, 7)
 
         if type(data_['fuzzy_value_low']) != type(""):
             penyebut += self.total_penyebut(data_['fuzzy_value_low'], 1, 4)
             pembilang += self.total_pembilang(data_['fuzzy_value_low'], 1, 4)
-
-        print(pembilang)
-        print(penyebut)
 
         hasil = pembilang/penyebut
 
@@ -306,6 +303,7 @@ def inferensi(crisp_value, data, posisi):
             else:
                 if hasil <= temp:
                     hasil = temp
+
     elif crisp_value == "medium":
         if data_i["fuzzy_pelayanan_memuaskan"] != 0 and data_i["fuzzy_makanan_tidak_enak"] != 0:
             if data_i["fuzzy_pelayanan_memuaskan"] <= data_i["fuzzy_makanan_tidak_enak"]:

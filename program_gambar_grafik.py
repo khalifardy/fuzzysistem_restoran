@@ -66,3 +66,17 @@ plt.show()
 
 
 # %%
+x_crisp_value = [i+1 for i in range(6)]
+x_crisp_value_2 = [i+1 for i in range(2, 8)]
+x_crisp_value_3 = [i+1 for i in range(8)]
+y_crisp_value = [0.5 for i in range(8)]
+
+y_awal = [fuzzy.makanan(i+1, "tidak enak") for i in range(6)]
+y_sedang = [fuzzy.makanan(i, "cukup enak") for i in range(2, 8)]
+
+plt.plot(x_crisp_value, y_awal, label="low")
+plt.plot(x_crisp_value_2, y_sedang, 'g', label="medium")
+plt.plot(x_crisp_value_3, y_crisp_value, "r", label="mandani")
+plt.legend(loc="upper right", bbox_to_anchor=(1.4, 1))
+plt.show()
+# %%
